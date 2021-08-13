@@ -17,18 +17,16 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="img/logo.png" width="120px">
+                <a href="Index.html"><img src="img/logo.png" width="120px"></a>
             </div>
             <nav>
                 <ul id="MenuItems">
                     <li><a href="Index.html">Home</a></li>
-                    <li><a href="">produtos</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">contato</a></li>
-                    <li><a href="">Login</a></li>
+                    <li><a href="Produtos.html">produtos</a></li>
+                    <li><a href="Conta.html">Login</a></li>
                 </ul>
             </nav>
-            <img src="img/sacola.png" width="30px" height="30px">
+            <a href="Carrinho.html"><img src="img/sacola.png" width="30px" height="30px"></a>
             <img src="img/menu.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
@@ -38,20 +36,20 @@
     <div class="small-container unico-produto">
         <div class="fileira">
             <div class="col-2">
-                <img src="img/product-7.jpg" width="100%" id="product-img">
+                <img src="img/tanjum.jpg" width="100%" id="product-img">
 
                 <div class="small-img-fileira">
                     <div class="small-img-col">
-                        <img src="img/jordan-1.jpg" width="100%" class="small-img">
+                        <img src="img/tanjum-1.jpg" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="img/jordan-2.png" width="100%" class="small-img">
+                        <img src="img/tanjum-2.jpg" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="img/jordan-3.png" width="100%" class="small-img">
+                        <img src="img/tanjum-3.jpg" width="100%" class="small-img">
                     </div>
                     <div class="small-img-col">
-                        <img src="img/jordan-4.png" width="100%" class="small-img">
+                        <img src="img/tanjum-4.jpg" width="100%" class="small-img">
                     </div>
                 </div>
 
@@ -61,8 +59,8 @@
 
             </div>
             <div class="col-2">
-                <h1>Nike Air Jordan 1 Premium Black / White</h1>
-                <h4>$50.00</h4>
+                <h1>Nike Tanjun Running Shoes</h1>
+                <h4>$80.00</h4>
                 <select>
                     <option>Tamanho</option>
                     <option>36</option>
@@ -72,13 +70,12 @@
                     <option>40</option>
                 </select>
                 <input type="number" value="1">
-                <a href="" class="btn">Adicionar ao Carrinho</a>
+                <a href="Carrinho.html" class="btn">Adicionar ao Carrinho</a>
 
                 <h3>Detalhes <i class="fa fa-indent"></i></h3>
                 <br>
-                <p>JORDAN com logotipo exclusivo da Air Jordan Wings, motivo exclusivo do Jumpman, detalhe do logotipo
-                    exclusivo da Swoosh, detalhes do painel contrastante, bico redondo, detalhes perfurados, fecho
-                    frontal com cadarço, palmilha de marca e sola de borracha
+                <p>O Tênis Nike Tanjun Infantil proporciona encaixe perfeito aos pés, com suporte. Além disso, conta com
+                    flexibilidade e cabedal clean, que traz a sensação de maciez e leveza.
                 </p>
 
 
@@ -92,7 +89,7 @@
     <div class="small-container">
         <div class="fileira fileira-2">
             <h2>Produtos Relacionados</h2>
-            <p>Veja Mais</p>
+            <a href="Produtos.html"> <p>Veja Mais</p> </a>
         </div>
     </div>
 
@@ -221,20 +218,16 @@
         var ProductImg = document.getElementById("product-img");
         var SmallImg = document.getElementsByClassName("small-img");
 
-        SmallImg[0].onclick = function()
-        {
+        SmallImg[0].onclick = function () {
             ProductImg.src = SmallImg[0].src;
         }
-        SmallImg[1].onclick = function()
-        {
+        SmallImg[1].onclick = function () {
             ProductImg.src = SmallImg[1].src;
         }
-        SmallImg[2].onclick = function()
-        {
+        SmallImg[2].onclick = function () {
             ProductImg.src = SmallImg[2].src;
         }
-        SmallImg[3].onclick = function()
-        {
+        SmallImg[3].onclick = function () {
             ProductImg.src = SmallImg[3].src;
         }
     </script>

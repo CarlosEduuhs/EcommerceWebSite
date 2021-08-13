@@ -60,6 +60,7 @@ p {
 .col-2 img {
     max-width: 100%;
     padding: 50px 0;
+    border-radius: 2%;
 }
 
 .col-2 h1 {
@@ -102,6 +103,7 @@ p {
 
 .col-3 img {
     width: 100%;
+    border-radius: 3%;
 }
 
 .small-container {
@@ -120,6 +122,7 @@ p {
 }
 .col-4 img{
     width: 100%;
+    border-radius: 3%;
 }
 .titulo{
     text-align: center;
@@ -276,33 +279,6 @@ ul{
     display: none;
 }
 
-/*-- consulta de mídia para menu --*/
-
-@media only screen and (max-width: 800px) {
-
-    nav ul{
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background: #333;
-        width: 100%;
-        overflow: hidden;
-        transition: max-height 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin-right: 50px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    nav ul li a{
-        color: #fff;
-    }
-    .menu-icon{
-        display: block;
-        cursor: pointer;
-    }
-}
 
 /*---- pagina de todos os produtos ----*/
 
@@ -336,25 +312,136 @@ select:focus{
 }
 
 
-/*------ consulta de mídia para tamanho de tela inferior a 600 ------*/
-@media only screen and (max-width: 600px){
 
-    .fileira{
-        text-align: center;
-    }
-    .col-2, .col-3, .col-4{
-        flex-basis: 100%;
-    }
-    .unico-produto .fileira{
-        text-align: left;
-    }
-    .unico-produto .col-2{
-        padding: 20px 0;
-    }
-    .unico-produto h1{
-        font-size: 26px;
-        line-height: 32px;
-    }
+/*------- Items do carrinho -------*/
+
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a{
+    color: #ff523b;
+    font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.ValorTotal{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ValorTotal table{
+    border-top: 3px solid #ff523b;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+/*----- Pagina de Login -----*/
+
+.account-page{
+    padding: 50px 0;
+    background: radial-gradient(#fff,#ffd6d6);
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 20px;
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    top: auto;
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+
+#Indicador{
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
 }
 
 /*    Pagina de produto detalhado    */
@@ -401,3 +488,63 @@ input:focus{
     flex-basis: 24%;
     cursor: pointer;
 }
+.small-img-col img{
+    border-radius: 5%;
+}
+
+
+/*-- consulta de mídia para menu --*/
+
+@media only screen and (max-width: 800px) {
+
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: #fff;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+/*------ consulta de mídia para tamanho de tela inferior a 600 ------*/
+@media only screen and (max-width: 600px){
+
+    .fileira{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .unico-produto .fileira{
+        text-align: left;
+    }
+    .unico-produto .col-2{
+        padding: 20px 0;
+    }
+    .unico-produto h1{
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .cart-info p{
+        display: none;
+    }
+}
+

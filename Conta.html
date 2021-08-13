@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <title>Todos os Produtos - Espaço Tenis</title>
+    <link rel='stylesheet' type='text/css' href='Style.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="Index.html"><img src="img/logo.png" width="120px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="Produtos.html">Produtos</a></li>
+                    <li><a href="Conta.html">Login</a></li>
+                </ul>
+            </nav>
+            <a href="Carrinho.html"><img src="img/sacola.png" width="30px" height="30px"></a>
+            <img src="img/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- pagina de login -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="fileira">
+                <div class="col-2">
+                    <img src="img/image1.png" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Cadastro</span>
+                            <hr id="Indicador">
+                        </div>
+
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Email">
+                            <input type="password" placeholder="Senha">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Esqueci a Senha</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="text" placeholder="CPF">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Senha">
+                            <input type="date">
+                            <button type="submit" class="btn">Registrar</button>
+
+                        </form>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Rodapé -->
+
+    <div class="rodape">
+        <div class="container">
+            <div class="fileira">
+                <div class="rodape-col-1">
+                    <h3>Baixe Nosso App</h3>
+                    <p>Baixe Agora Para Android e Ios</p>
+                </div>
+                <div class="rodape-col-2">
+                    <img src="img/logo-white.jpg">
+                    <p>Nosso Objetivo é trazer a confortabilidade para os seus pés </p>
+                    <div class="app-logo">
+                        <img src="img/play-store.png">
+                        <img src="img/app-store.png">
+                    </div>
+                </div>
+                <div class="rodape-col-3">
+                    <h3>Links Úteis</h3>
+                    <ul>
+                        <li>cupons</li>
+                        <li>Blog</li>
+                        <li>Política de devolução</li>
+                        <li>Torne-se um afiliado</li>
+                    </ul>
+                </div>
+                <div class="rodape-col-4">
+                    <h3>Siga-nos</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2021 - Carlos Eduardo</p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- js para alternar menu -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+
+    <!-- js para alternar o form -->
+
+    <script>
+
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicador = document.getElementById("Indicador");
+
+
+        function register(){
+
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicador.style.transform = "translateX(100px)";
+        }
+
+        function login(){
+
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicador.style.transform = "translateX(0px)";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
